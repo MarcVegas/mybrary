@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Mollen Personal Use';
+    src: url('/fonts/MollenPersonalUse-Bold.woff2') format('woff2'),
+        url('/fonts/MollenPersonalUse-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mollen Personal Use';
+    src: url('/fonts/MollenPersonalUse-Regular.woff2') format('woff2'),
+        url('/fonts/MollenPersonalUse-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mollen Personal Use';
+    src: url('/fonts/MollenPersonalUse-BoldNarrow.woff2') format('woff2'),
+        url('/fonts/MollenPersonalUse-BoldNarrow.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

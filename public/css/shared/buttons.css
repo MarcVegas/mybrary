@@ -1,0 +1,50 @@
+:root {
+    --button-text-color: white;
+    --button-primary-bg: rgb(70, 71, 92);
+    --button-danger-bg: rgb(197, 35, 35);
+    --button-primary-light-bg: rgb(98, 99, 121);
+    --button-danger-light-bg: rgb(211, 53, 53);
+}
+
+.button {
+    border: none;
+    border-radius: 5px;
+    padding: .4rem 1rem;
+    font-size: .7rem;
+    font-family: 'Mollen Personal Use';
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.button-row > *::first-child {
+    margin-left: 0;
+}
+
+.button-row > * {
+    margin-left: .7rem;
+}
+
+.primary {
+    color: var(--button-text-color);
+    background-color: var(--button-primary-bg);
+}
+
+.primary:hover {
+    background-color: var(--button-primary-light-bg);
+    transition: 150ms ease-in-out;
+}
+
+.danger {
+    color: var(--button-text-color);
+    background-color: var(--button-danger-bg);
+}
+
+.danger:hover {
+    background-color: var(--button-danger-light-bg);
+    transition: 150ms ease-in-out;
+}

@@ -10,14 +10,17 @@
     <script defer src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.js"></script>
     <script defer src="https://unpkg.com/filepond-plugin-image-resize/dist/filepond-plugin-image-resize.js"></script>
     <script defer src="https://unpkg.com/filepond/dist/filepond.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
     <script defer src="/js/fileUpload.js"></script>
     <title>MyBrary</title>
 </head>
 <body>
-    <%- include('../views/inc/header.ejs') %>
-    <%- include('../views/inc/errorMessage.ejs') %>  
-    <br>
-    <%- body %> 
-    <br>
+    <div class="container">
+        <%- include('../views/inc/header.ejs') %>
+        <div class="inner-container">
+            <%- include('../views/inc/errorMessage.ejs') %>
+            <%- body %>
+        </div>
+    </div>
 </body>
 </html>
