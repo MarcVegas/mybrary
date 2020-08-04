@@ -2,8 +2,10 @@
     --button-text-color: white;
     --button-primary-bg: rgb(70, 71, 92);
     --button-danger-bg: rgb(197, 35, 35);
+    --button-success-bg: rgb(8, 148, 43);
     --button-primary-light-bg: rgb(98, 99, 121);
     --button-danger-light-bg: rgb(211, 53, 53);
+    --button-success-light-bg: rgb(27, 163, 61);
 }
 
 .button {
@@ -36,6 +38,16 @@
 
 .primary:hover {
     background-color: var(--button-primary-light-bg);
+    transition: 150ms ease-in-out;
+}
+
+.success {
+    color: var(--button-text-color);
+    background-color: var(--button-success-bg);
+}
+
+.success:hover {
+    background-color: var(--button-success-light-bg);
     transition: 150ms ease-in-out;
 }
 

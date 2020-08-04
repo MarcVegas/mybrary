@@ -1,28 +1,35 @@
-<div>
-    <label>Title</label>
-    <input type="text" name="title" value="<%= book.title %>">
+<div class="fields">
+    <div class="field">
+        <label>Title</label>
+        <input type="text" name="title" value="<%= book.title %>">
+    </div>
+    <div class="field">
+        <label>Author</label>
+        <select name="author">
+            <% authors.forEach(author => { %>
+                <option <% (author.id === book.author) ? selected : '' %> label="<%= author.name %>" value="<%= author.id %>">
+            <% }) %> 
+        </select>
+    </div>
 </div>
-<div>
-    <label>Author</label>
-    <select name="author">
-        <% authors.forEach(author => { %>
-            <option <% (author.id === book.author) ? selected : '' %> label="<%= author.name %>" value="<%= author.id %>">
-        <% }) %> 
-    </select>
+<div class="fields">
+    <div class="field">
+        <label>Publish Date</label>
+        <input type="date" name="publishDate" value="<%= book.publishDate == null ? '': book.publishDate.toISOString().split('T')[0] %>">
+    </div>
+    <div class="field">
+        <label>Page Count</label>
+        <input type="number" name="pageCount" min="1" value="<%= book.pageCount %>">
+    </div>
 </div>
-<div>
-    <label>Publish Date</label>
-    <input type="date" name="publishDate" value="<%= book.publishDate == null ? '': book.publishDate.toISOString().split('T')[0] %>">
+<div class="fields">
+    <div class="field field-static">
+        <label>Cover</label>
+        <input type="file" name="cover" class="filepond">
+    </div>
+    <div class="field">
+        <label>Description</label>
+        <textarea name="description" ><%= book.description %> </textarea>
+    </div>
 </div>
-<div>
-    <label>Page Count</label>
-    <input type="number" name="pageCount" min="1" value="<%= book.pageCount %>">
-</div>
-<div>
-    <label>Cover</label>
-    <input type="file" name="cover" class="filepond">
-</div>
-<div>
-    <label>Description</label>
-    <textarea name="description" ><%= book.description %> </textarea>
-</div>
+
