@@ -2,14 +2,8 @@
 <div class="button-row">
     <a class="button primary" href="/authors/<%= author.id %>/edit">Edit</a>
     <%- include('../inc/deleteForm', {url: `/authors/${author.id}`}) %>
-</div>
+</div> 
 <% if (booksByAuthor.length > 0) { %>
     <h2 class="page-header">Books by Author</h2>
-    <div>
-        <% booksByAuthor.forEach(book => {%>
-            <a href="/books/<%= book.id %>">
-                <img src="<%= book.coverImagePath %>" alt="" height="150" width="100">
-            </a>
-        <% }) %> 
-    </div>
+    <%- include('../inc/bookGrid',{books:booksByAuthor}) %>
 <% } %> 

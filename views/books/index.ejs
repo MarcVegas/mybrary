@@ -22,10 +22,4 @@
     </div>
 </form>
 <br>
-<div>
-    <% books.forEach(book => {%>
-        <a href="/books/<%= book.id %>">
-            <img src="<%= book.coverImagePath %>" alt="" height="150" width="100">
-        </a>
-    <% }) %> 
-</div>
+<%- include('../inc/bookGrid',{books:books}) %>

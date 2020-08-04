@@ -8,15 +8,17 @@
         </div>
     </div>
     <div class="fields fields-right">
-        <button class="button primary" type="submit">Search</button>
+        <button class="button primary" class="button primary" type="submit">Search</button>
     </div>
 </form>
 <br>
 <% authors.forEach(author => {%>
-    <div><%= author.name %> </div>
-    <div class="button-row">
-        <a class="button primary" href="/authors/<%= author.id %>">View</a>
-        <a class="button primary" href="/authors/<%= author.id %>/edit">Edit</a>
-        <%- include('../inc/deleteForm', { url: `/authors/${author.id}` }) %> 
+    <div class="author-row">
+        <div class="author-name"><%= author.name %> </div>
+        <div class="button-row">
+            <a class="button primary" href="/authors/<%= author.id %>">View</a>
+            <a class="button primary" href="/authors/<%= author.id %>/edit">Edit</a>
+            <%- include('../inc/deleteForm', { url: `/authors/${author.id}` }) %> 
+        </div>
     </div>
 <% }) %> 

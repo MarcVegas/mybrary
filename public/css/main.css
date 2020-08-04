@@ -3,6 +3,8 @@
 @import 'shared/header.css';
 @import 'shared/buttons.css';
 @import 'shared/form.css';
+@import 'shared/author.css';
+@import 'shared/books.css';
 
 :root {
     font-family: 'Mollen Personal Use';
@@ -32,4 +34,8 @@ body {
 .page-header {
     font-size: 1.5rem;
     font-weight: 300;
+}
+
+.error-message {
+    color: var(--button-danger-bg);
 }
